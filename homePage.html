@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dashboard {
+            padding: 40px 10%;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        .overview {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            flex: 1;
+            min-width: 220px;
+            padding: 30px;
+            border-radius: 20px;
+            background: linear-gradient(145deg, #1c1c1c, #111);
+            box-shadow: 
+                0 0 15px rgba(255, 60, 0, 0.3),
+                inset 0 0 10px rgba(255, 60, 0, 0.1);
+            text-align: center;
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 
+                0 0 25px rgba(255, 60, 0, 0.6),
+                0 0 50px rgba(255, 60, 0, 0.3);
+        }
+
+        .stat-card h2 {
+            font-size: 40px;
+            margin: 15px 0;
+            color: #ff3c00;
+        }
+
+        .stat-card p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .icon {
+            font-size: 30px;
+        }
+
+        .courses {
+            margin-top: 60px;
+        }
+
+        .course-container {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .course-card {
+            text-align: center;
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.4s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(255,60,0,0.5);
+        }
+
+        .circle {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+        }
+
+        svg {
+            transform: rotate(-90deg);
+        }
+
+        circle {
+            fill: none;
+            stroke-width: 10;
+            stroke: #333;
+        }
+
+        .progress-ring {
+            stroke: #ff3c00;
+            stroke-linecap: round;
+            stroke-dasharray: 314;
+            stroke-dashoffset: 314;
+            transition: 1.5s ease;
+        }
+
+        .percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff3c00;
+        }
+
+        /* .progress-bar {
+            background: #333;
+            height: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .progress {
+            background: #ff3c00;
+            height: 10px;
+            border-radius: 5px;
+        } */
+
+        .activity ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .activity li {
+            margin: 10px 0;
+        }
+
+        .badge {
+            background: #ff3c00;
+            padding: 10px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .upcoming {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+
+        <!-- 🔥 Welcome Section -->
+        <section class="welcome">
+            <h2>Welcome Back, Harshi 👋</h2>
+            <p>Continue your journey to becoming industry-ready.</p>
+        </section>
+
+        <!-- 📊 Overview Cards -->
+<section class="overview">
+
+    <div class="stat-card">
+        <div class="icon">📚</div>
+        <h2>3</h2>
+        <p>Courses Enrolled</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="icon">📝</div>
+        <h2>12</h2>
+        <p>Assignments Completed</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="icon">🎯</div>
+        <h2>5</h2>
+        <p>Workshops Attended</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="icon">🏆</div>
+        <h2>2</h2>
+        <p>Certificates Earned</p>
+    </div>
+
+</section>
+
+        <!-- 📚 My Courses -->
+        <section class="courses">
+    <h3>My Courses</h3>
+
+    <div class="course-container">
+
+        <div class="course-card">
+            <div class="circle" data-percent="70">
+                <svg>
+                    <circle cx="60" cy="60" r="50"></circle>
+                    <circle cx="60" cy="60" r="50" class="progress-ring"></circle>
+                </svg>
+                <div class="percentage">70%</div>
+            </div>
+            <h4>Full Stack Development</h4>
+        </div>
+
+        <div class="course-card">
+            <div class="circle" data-percent="45">
+                <svg>
+                    <circle cx="60" cy="60" r="50"></circle>
+                    <circle cx="60" cy="60" r="50" class="progress-ring"></circle>
+                </svg>
+                <div class="percentage">45%</div>
+            </div>
+            <h4>Python & Django</h4>
+        </div>
+
+        <div class="course-card">
+            <div class="circle" data-percent="60">
+                <svg>
+                    <circle cx="60" cy="60" r="50"></circle>
+                    <circle cx="60" cy="60" r="50" class="progress-ring"></circle>
+                </svg>
+                <div class="percentage">60%</div>
+            </div>
+            <h4>DSA Bootcamp</h4>
+        </div>
+
+    </div>
+</section>
+
+        <!-- 📚 Recent Activity -->
+        <section class="activity">
+            <h3>Recent Activity</h3>
+            <ul>
+                <li>✔ Completed "Django Models" lesson</li>
+                <li>✔ Submitted Assignment #4</li>
+                <li>🔔 Live Session Tomorrow at 7PM</li>
+            </ul>
+        </section>
+
+        <!-- 🏆 Achievements -->
+        <section class="achievements">
+            <h3>Achievements</h3>
+            <div class="badge">🔥 First Course Completed</div>
+            <div class="badge">🚀 30 Days Consistency</div>
+            <div class="badge">💼 Internship Shortlisted</div>
+        </section>
+
+        <!-- 🗓 Upcoming Session -->
+        <section class="upcoming">
+            <h3>Next Live Session</h3>
+            <p><strong>Advanced Django APIs</strong></p>
+            <p>Date: 25 Feb 2026</p>
+            <p>Time: 7:00 PM</p>
+        </section>
+
+    </div>
+<script>
+document.querySelectorAll(".circle").forEach(circle => {
+    let percent = circle.getAttribute("data-percent");
+    let progressRing = circle.querySelector(".progress-ring");
+    let radius = 50;
+    let circumference = 2 * Math.PI * radius;
+
+    let offset = circumference - (percent / 100) * circumference;
+    setTimeout(() => {
+        progressRing.style.strokeDashoffset = offset;
+    }, 500);
+});
+</script>
+</body>
+</html>
