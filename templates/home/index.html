@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Angaar Batch</title>
+
+<style>
+    /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background-color: #ca0404;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* LOGO */
+header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* LINKS */
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+
+nav a {
+    font-size: 15px;
+}
+
+/* HOVER EFFECT */
+nav a:hover {
+    color: #ff3c00;
+}
+
+/* REGISTER BUTTON STYLE */
+nav a:last-child {
+    background-color: #ff3c00;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+nav a:last-child:hover {
+    background-color: #e53200;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    nav {
+        display: none;
+    }
+}
+/* section */
+/* HERO SECTION */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    padding: 100px 10%;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* TOP LEFT TAG */
+.hero-top-left {
+    position: absolute;
+    top: 30px;
+    left: 8%;
+}
+
+.hero-top-left h2 {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #ff3c00;
+}
+
+/* TOP RIGHT POWERED BY */
+.hero-top-right {
+    position: absolute;
+    top: 30px;
+    right: 8%;
+    font-size: 13px;
+    color: #aaa;
+    text-align: right;
+}
+
+/* MAIN CONTENT */
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.hero-content h3 {
+    font-size: 20px;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #bbb;
+    margin-bottom: 40px;
+}
+
+/* BUTTONS */
+.hero-content button {
+    padding: 14px 28px;
+    margin: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-content button:first-of-type {
+    background: #ff3c00;
+    color: white;
+    border: none;
+}
+
+.hero-content button:first-of-type:hover {
+    background: #e53200;
+    transform: translateY(-2px);
+}
+
+.hero-content button:last-of-type {
+    background: transparent;
+    border: 2px solid #ff3c00;
+    color: #ff3c00;
+}
+
+.hero-content button:last-of-type:hover {
+    background: #ff3c00;
+    color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .hero-top-left,
+    .hero-top-right {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        padding: 80px 6%;
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
+
+/* Responsive */ 
+@media (max-width: 768px) {
+    .trusted-box {
+        padding: 40px 20px;
+    }
+
+    .trusted-box ul {
+        gap: 15px;
+    }
+
+    .trusted-box li {
+        font-size: 14px;
+    }
+
+} 
+
+/* 4th  */
+/* ECOSYSTEM SECTION */
+/* .ecosystem {
+    padding: 100px 10%;
+    background: #ffffff;
+    text-align: center;
+} */
+
+/* Header */
+/* .ecosystem-header h2 {
+    font-size: 18px;
+    color: #ff3c00;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.ecosystem-header h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.ecosystem-header p {
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Category Title */
+.program-category h3 {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+/* Cards Layout */
+.program-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Individual Card */
+.program-card {
+    /* background: #f9f9f9; */
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(150, 76, 76, 0.05);
+    transition: 0.3s ease;
+}
+
+/* Card Hover */
+.program-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* Card Title */
+.program-card h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Card Paragraph */
+.program-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* Price Highlight */
+.program-card .price {
+    font-weight: 600;
+    color: #ff3c00;
+    margin-top: 10px;
+}
+
+/* Button */
+.program-card button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    background: #ff3c00;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.program-card button:hover {
+    background: #e53200;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ecosystem {
+        padding: 80px 6%;
+    }
+
+    .program-card {
+        width: 100%;
+    }
+
+    .ecosystem-header h3 {
+        font-size: 24px;
+    }
+}
+/* 5th */
+/* REACH SECTION */
+.reach {
+    padding: 100px 10%;
+    background: #f9f9f9;
+}
+
+/* Header */
+.reach-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.reach-header h2 {
+    color: #ff3c00;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.reach-header h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.reach-header p {
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+}
+
+/* Grid Layout */
+.reach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 70px;
+}
+
+/* Region Card */
+.region-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.region:hover {
+    transform: translateY(-6px);
+}
+
+.region h4 {
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.region ul {
+    list-style: none;
+    padding: 0;
+}
+
+.region li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* CTA */
+.reach-cta {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.reach-cta h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.reach-cta p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.reach-cta button {
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 6px;
+    border: none;
+    background: #ff3c00;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.reach-cta button:hover {
+    background: #e53200;
+}
+
+/* Impact Stats */
+.impact {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.impact-box {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.impact-box span {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    margin-top: 8px;
+}
+/* 6th */
+/* TESTIMONIAL SECTION */
+.testimonials {
+    padding: 100px 10%;
+}
+
+/* Header */
+.testimonial-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.testimonial-header h2 {
+    font-size: 18px;
+    color: #ff3c00;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.testimonial-header h3 {
+    font-size: 32px;
+}
+
+/* Grid */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Card */
+.testimonial-card {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* Quote Text */
+.testimonial-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Name */
+.testimonial-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+}
+/* 7th */
+/* CODE SECTION */
+.code-section {
+    padding: 100px 10%;
+    background: #0f0f0f;
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+.code-header h2 {
+    font-size: 18px;
+    color: #ff3c00;
+    margin-bottom: 10px;
+}
+
+.code-header h3 {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+/* Main Code Box */
+.code-box {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* Paragraphs */
+.code-box p {
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* Headings inside */
+.code-box h4 {
+    margin: 25px 0 10px;
+    font-size: 16px;
+    color: #ff3c00;
+}
+
+/* Code Blocks */
+.code-box pre {
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 14px;
+    overflow-x: auto;
+}
+
+/* Editor block */
+.editor {
+    border-left: 4px solid #ff3c00;
+}
+
+/* Output block */
+.output {
+    border-left: 4px solid #4caf50;
+}
+
+/* Button */
+.code-box button {
+    margin-top: 25px;
+    padding: 12px 28px;
+    background: #ff3c00;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.code-box button:hover {
+    background: #e53200;
+    transform: translateY(-2px);
+} */
+/* 8th */
+/* PROJECT SECTION */
+.projects {
+    padding: 100px 10%;
+    background: #f9f9f9;
+}
+
+/* Header */
+.projects-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.projects-header h2 {
+    font-size: 32px;
+}
+
+/* Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 70px;
+}
+
+/* Card */
+.project-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Title */
+.project-card h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+/* Description */
+.project-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* CTA */
+.project-cta {
+    text-align: center;
+}
+
+.project-cta h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.project-cta button {
+    padding: 14px 28px;
+    border: none;
+    background: #ff3c00;
+    color: white;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.project-cta button:hover {
+    background: #e53200;
+    transform: translateY(-2px);
+}
+/* 9 */
+/* PEDAGOGY SECTION */
+.pedagogy {
+    padding: 100px 10%;
+}
+
+.pedagogy-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.pedagogy-header h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.pedagogy-header p {
+    color: #666;
+    font-size: 15px;
+}
+
+/* Grid Layout */
+.pedagogy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+/* Cards */
+.pedagogy-card {
+    background: #f9f9f9;
+    padding: 40px 30px;
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+.pedagogy-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* Titles */
+.pedagogy-card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ff3c00;
+}
+
+/* List */
+.pedagogy-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pedagogy-card li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    color: #555;
+}
+
+/* Custom bullet */
+.pedagogy-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ff3c00;
+    font-weight: bold;
+}
+/* footer */
+/* FOOTER */
+.main-footer {
+    background: #0f0f0f;
+    color: #ddd;
+    padding: 70px 10% 40px;
+    position: relative;
+}
+
+/* Motivational line */
+.footer-top {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.footer-top h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Footer columns */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-links,
+.footer-contact {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Headings */
+.footer-content h4 {
+    margin-bottom: 15px;
+    color: #ff3c00;
+}
+
+/* Links */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-links li:hover {
+    color: #ff3c00;
+}
+
+/* Contact text */
+.footer-contact p {
+    margin-bottom: 10px;
+    color: #bbb;
+}
+
+/* Bottom row */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+/* Powered by in corner */
+.powered {
+    font-size: 13px;
+    opacity: 0.6;
+}
+ /* extraaaaa */
+/*  */
+/*  */
+/* ===============================
+   🔥 ANGAAR VOLCANO THEME
+   =============================== */
+
+/* Global Reset */
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #1a0000 0%, #0d0000 40%, #000000 100%);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* 🔥 Fire Text Glow */
+.fire-text {
+    color: #ff4d00;
+    text-shadow:
+        0 0 5px #ff4d00,
+        0 0 10px #ff2200,
+        0 0 20px #ff0000,
+        0 0 40px #ff0000;
+}
+
+/* Sections */
+section {
+    padding: 100px 10%;
+    position: relative;
+}
+
+/* Card Style */
+.card,
+article,
+.pedagogy-card,
+.project-card,
+.code-box {
+    background: rgba(20, 0, 0, 0.6);
+    border: 1px solid rgba(255, 80, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    transition: 0.4s ease;
+}
+
+/* Hover Glow Effect */
+.card:hover,
+article:hover,
+.pedagogy-card:hover,
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(255, 60, 0, 0.6);
+}
+
+/* 🔥 Buttons */
+/* 🔥 Flame Button Style */
+.btn-fire {
+    background: linear-gradient(45deg, #ff2200, #ff6a00);
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-fire:hover {
+    box-shadow: 0 0 20px #ff3300;
+    transform: scale(1.05);
+}
+
+/* 🔥 Fire Flicker Animation */
+@keyframes flicker {
+    0% { text-shadow: 0 0 5px #ff4d00; }
+    25% { text-shadow: 0 0 15px #ff2200; }
+    50% { text-shadow: 0 0 25px #ff0000; }
+    75% { text-shadow: 0 0 15px #ff3300; }
+    100% { text-shadow: 0 0 5px #ff4d00; }
+}
+
+.fire-animate {
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* 🔥 Lava Floating Background Animation */
+@keyframes lavaMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 0; }
+}
+
+.lava-bg {
+    background: linear-gradient(
+        90deg,
+        #000000,
+        #1a0000,
+        #330000,
+        #1a0000,
+        #000000
+    );
+    background-size: 200% 100%;
+    animation: lavaMove 20s linear infinite;
+}
+
+/* 🔥 Fire Particle Effect */
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image: radial-gradient(circle, rgba(255,80,0,0.2) 2px, transparent 2px);
+    background-size: 80px 80px;
+    animation: moveParticles 60s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveParticles {
+    from { transform: translateY(0); }
+    to { transform: translateY(-500px); }
+}
+
+/* Footer Fire Accent */
+footer {
+    background: linear-gradient(to top, #000000, #1a0000);
+    border-top: 2px solid #ff3300;
+}
+/* === VOLCANO BACKGROUND === */
+body {
+    margin: 0;
+    padding: 0;
+    background: url("bg.jpg") center/cover no-repeat;
+
+    background-size: cover;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+/* === EMBER PARTICLES === */
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image: radial-gradient(circle, rgba(255,100,0,0.4) 2px, transparent 2px);
+    background-size: 60px 60px;
+    animation: embersMove 40s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes embersMove {
+    from { transform: translateY(0); }
+    to { transform: translateY(-500px); }
+}
+/* === CURSOR GLOW === */
+.cursor-glow {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,80,0,0.6) 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+/* ===========================
+   GLOBAL STYLES
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    background: linear-gradient(180deg, #090009, #000000) fixed;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* BUTTONS */
+button {
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+/* ===========================
+   HEADER / NAVIGATION
+   =========================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: rgba(0,0,0,0.7);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+header h1 {
+    color: #ff3c00;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header nav a {
+    margin: 0 15px;
+    font-size: 15px;
+    color: #fff;
+}
+header nav a:hover {
+    color: #ff8b1f;
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+.hero {
+    min-height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), 
+                url("bg.jpg") center/cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 8%;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 52px;
+    color: #ff7d1f;
+    text-shadow: 0 0 12px #ff6a00;
+}
+
+.hero h3 {
+    margin-top: 12px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ddd;
+}
+
+.hero button {
+    padding: 14px 32px;
+    margin: 15px;
+    background: linear-gradient(45deg, #ff3c00, #ff892d);
+    color: white;
+    border-radius: 8px;
+}
+.hero button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(45deg, #ff892d, #ff3c00);
+}
+
+/* ===========================
+   SECTIONS HEADINGS
+   =========================== */
+section h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #ff3c00;
+}
+
+section h3 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.trusted {
+    padding: 100px 10%;
+
+    text-align: center;
+}
+
+.trusted-wrapper h2 {
+    font-size: 28px;
+    margin-bottom: 60px;
+    font-weight: 700;
+    color: #222;
+}
+
+.trusted-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.trusted-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.trusted-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    color: #ff3c00;
+}
+
+.trusted-card.highlight {
+    background: linear-gradient(135deg, #ff3c00, #ff7a00);
+    color: white;
+    font-weight: 700;
+}
+
+.more-text {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ff3c00;
+    padding: 20px;
+}
+/* ===========================
+   ECOSYSTEM / PROGRAM CARDS
+   =========================== */
+.ecosystem {
+    padding: 80px 8%;
+    background: #08000a;
+}
+.program-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.program-card {
+    background: #11001f;
+    padding: 30px;
+    border-radius: 14px;
+    width: 300px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.4);
+    color: #fff;
+    transition: 0.4s ease;
+}
+.program-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(255,80,0,0.6);
+}
+.program-card .price {
+    font-weight: 700;
+    color: #ff6a00;
+}
+.program-card button {
+    margin-top: 18px;
+    width: 100%;
+    background: #ff4d00;
+    padding: 12px;
+    border-radius: 6px;
+    color: white;
+}
+.program-card button:hover {
+    background: #ff7d1f;
+}
+
+/* ===========================
+   REACH / GRID LAYOUT
+   =========================== */
+.reach {
+    padding: 80px 8%;
+    background: #06000a;
+}
+.reach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+    gap: 28px;
+}
+.region-card {
+    background: #12001a;
+    padding: 25px;
+    border-radius: 10px;
+    color: #fff;
+}
+.region-card h4 {
+    color: #ff7d1f;
+}
+.region-card li {
+    list-style: none;
+    margin: 8px 0;
+}
+
+/* CTA BUTTONS */
+.reach-cta button {
+    margin: 10px 8px;
+    background: #ff3c00;
+    color: #fff;
+}
+.reach-cta button:hover {
+    background: #ff7d1f;
+}
+
+/* IMPACT STATS */
+.impact-box {
+    background: #1f001a;
+    padding: 20px;
+    margin: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    color: #d39696;
+}
+
+/* ===========================
+   TESTIMONIALS
+   =========================== */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+    gap: 28px;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    color: #333;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(255,80,0,0.25);
+}
+
+.testimonial-card h4 {
+    color: #ff4d00;
+}
+
+/* ===========================
+   CODE CHALLENGE
+   =========================== */
+.code-section {
+    background: #080008;
+    color: #be8a8a;
+}
+.code-box {
+    background: #15001f;
+    border: 2px solid #ff3c00;
+}
+.trusted,
+.testimonials,
+.pedagogy,
+.code-section ,
+.reach,
+.ecosystem{
+    background: rgba(0, 0, 0, 0.4);
+    /* backdrop-filter: blur(6px); */
+}
+/* ===========================
+   PROJECTS
+   =========================== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+    gap: 30px;
+}
+.project-card {
+    background: #1a001e;
+    padding: 28px;
+    border-radius: 12px;
+    color: #fff;
+}
+.project-card h4 {
+    color: #ff8b1f;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.main-footer {
+    background: #07000a;
+    color: #ccc;
+    padding: 50px 8%;
+}
+.footer-links li:hover {
+    color: #ff8b1f;
+}
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    overflow-x: hidden;
+    position: relative;
+}
+/* ================= FIRE PARTICLES ================= */
+
+.fire-particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.fire-particles span {
+    position: absolute;
+    bottom: -20px;
+    width: 6px;
+    height: 6px;
+    background: orange;
+    border-radius: 50%;
+    box-shadow: 0 0 10px orange, 0 0 20px red;
+    animation: rise linear infinite;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(0.5);
+        opacity: 0;
+    }
+}
+/* ================= SMOKE EFFECT ================= */
+
+.smoke {
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: url("https://i.ibb.co/7G7KjQh/smoke.png") repeat;
+    opacity: 0.05;
+    animation: smokeMove 60s linear infinite;
+    pointer-events: none;
+    z-index: -2;
+}
+
+@keyframes smokeMove {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-500px, -500px);
+    }
+}
+h1, h2 {
+    color: #ff6a00;
+    text-shadow: 
+        0 0 5px #ff3c00,
+        0 0 15px #ff3c00,
+        0 0 30px #ff0000;
+}
+@keyframes flicker {
+    0%,18%,22%,25%,53%,57%,100% {
+        text-shadow:
+        0 0 5px #ff3c00,
+        0 0 15px #ff3c00,
+        0 0 30px #ff0000;
+    }
+    20%,24%,55% {
+        text-shadow: none;
+    }
+}
+
+h1 {
+    animation: flicker 3s infinite;
+}
+</style>
+</head>
+
+<body>
+<div class="smoke"></div>
+<!-- HEADER -->
+<header>
+    <h2 class="fire-text fire-animate"> Angaar Hai</h2>
+    <nav>
+        <a href="#">Home</a> 
+        <a href="about">About</a> 
+ 
+        <a href="#">FLARE 1.0🔥</a> 
+        <a href="/accounts/login">Login</a> 
+        <a href="/accounts/register">Register</a>    
+        <a href="contact">Contact</a>    
+        <a href="/dashboard/">Dashboard</a>        
+
+    </nav>
+</header>
+
+<hr>
+<main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-top-left">
+            <h2>IGNITE TO LEARN</h2>
+        </div>
+
+        <div class="hero-top-right">
+            <p>Powered By <br> W3Grads</p>
+        </div>
+
+        <div class="hero-content">
+            <h1>The Future of Coding Education</h1>
+            <h3>Go Beyond the Code. Join The Angaar Batch.</h3>
+
+            <p>
+                Master in-demand tech skills through live online classes, 
+                exclusive industry events, and hands-on workshops hosted right at your college.
+            </p>
+            <button type="button"  class="btn-fire">Explore Our Programs</button>
+            <button type="button">Bring a Workshop to Your College</button>
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!-- TRUSTED BY -->
+    <section class="trusted">
+        <div class="trusted-container">
+            <h2>Trusted by Students From</h2>
+
+            <div class="trusted-grid">
+                <div class="trusted-card">
+                    <img src="https://theangaarbatch.in/static/img/home/iitd.png" height="45px"  alt="iit delhi"> <br> Delhi</div>
+                <div class="trusted-card">
+                    <img src="https://theangaarbatch.in/static/img/home/lpu.png" height="50px" alt="LPU"> <br>LPU</div>
+                <div class="trusted-card">
+                    <img src="https://theangaarbatch.in/static/img/home/gtbit.png" height="45px" alt="gtbit"> <br>GTBIT</div>
+                <div class="trusted-card">
+                    <img src="https://theangaarbatch.in/static/img/home/gla.png" height="45px" alt="GLA"> <br>GLA University</div>
+                <div class="trusted-card">
+                    <img src="https://theangaarbatch.in/static/img/home/glb.jpg" height="45px" alt="bjaj"> <br>GL Bajaj</div>
+                <div class="more-text">
+                    And Many More...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- ECOSYSTEM -->
+    <section class="ecosystem">
+
+        <div class="ecosystem-header">
+            <h2>Our Ecosystem</h2>
+            <h3>The Angaar Programs</h3>
+            <p>
+                Three interconnected pillars that create the most comprehensive 
+                coding education experience
+            </p>
+        </div>
+
+        <div class="program-category">
+            <h3>Free Online Classes</h3>
+        </div>
+
+        <div class="program-cards">
+
+            <article class="program-card">
+                <h4>C Programming For Ultimate Beginners</h4>
+                <p>Complete C programming from ultimate basics to advanced level</p>
+                <p>Instructor: Naman Sharma (Founder)</p>
+                <p class="price">₹ 2,999 - Your Curiosity</p>
+                <button type="button">Join Now</button>
+            </article>
+
+            <article class="program-card">
+                <h4>Python Programming For Ultimate Beginners</h4>
+                <p>Complete Python programming from ultimate basics to advanced level</p>
+                <p>Instructor: DK (Co-founder)</p>
+                <p class="price">₹ 2,999 - Your Discipline</p>
+                <button type="button">Join Now</button>
+            </article>
+
+        </div>
+
+    </section>
+    <hr>
+
+    <!-- OUR REACH -->
+    <section class="reach">
+
+        <div class="reach-header">
+            <h2>Our Reach</h2>
+            <h3>Angaar Across India</h3>
+            <p>
+                Discover our growing network of partner colleges and the impact 
+                we're making across the country
+            </p>
+        </div>
+
+ <section class="reach">
+
+    <h2 class="reach-title">Our Growing Presence Across India</h2>
+
+    <div class="reach-grid">
+
+        <!-- Delhi NCR -->
+        <div class="region-card">
+            <h3>Delhi NCR</h3>
+            <div class="college">IIT Delhi <span>1 Workshop</span></div>
+            <div class="college">DTU <span>3 Workshops</span></div>
+            <div class="college">NSUT <span>1 Workshop</span></div>
+            <div class="college">GTBIT Delhi <span>1 Workshop</span></div>
+            <div class="college">JIMS Noida <span>1 Workshop</span></div>
+            <div class="college">ANDC Delhi <span>1 Workshop</span></div>
+            <div class="college">Laxmibai College <span>1 Workshop</span></div>
+        </div>
+
+        <!-- Uttar Pradesh -->
+        <div class="region-card">
+            <h3>Uttar Pradesh</h3>
+            <div class="college">GLA University <span>6 Workshops</span></div>
+            <div class="college">GL Bajaj Mathura <span>2 Workshops</span></div>
+            <div class="college">BSA Mathura <span>1 Workshop</span></div>
+        </div>
+
+        <!-- Haryana -->
+        <div class="region-card">
+            <h3>Haryana</h3>
+            <div class="college">Microsoft Gurugram <span>1 Workshop</span></div>
+        </div>
+
+        <!-- Rajasthan -->
+        <div class="region-card">
+            <h3>Rajasthan</h3>
+            <div class="college">UEM Jaipur <span>2 Workshops</span></div>
+            <div class="college">Jaipur <span>Expanding Soon</span></div>
+        </div>
+
+        <!-- Uttarakhand -->
+        <div class="region-card">
+            <h3>Uttarakhand</h3>
+            <div class="college">Tula's Institute <span>1 Workshop</span></div>
+            <div class="college">Dehradun <span>Growing Fast</span></div>
+        </div>
+
+    </div>
+
+    <!-- CTA Section -->
+    <div class="reach-cta">
+        <h3>Next: Your Institute 🚀</h3>
+        <p>Bring Angaar to Your Campus!</p>
+        <div class="cta-features">
+            <span>Angaari Speakers</span>
+            <span>Free for Students</span>
+            <span>Hands-on Projects</span>
+            <span>Certificates</span>
+        </div>
+
+        <div class="cta-buttons">
+            <button class="btn-primary">WhatsApp</button>
+            <button class="btn-outline">Call Us</button>
+        </div>
+    </div>
+
+</section>
+        <div class="impact">
+            <div class="impact-box">34<br><span>Partner Colleges</span></div>
+            <div class="impact-box">8<br><span>Cities Covered</span></div>
+            <div class="impact-box">38<br><span>Workshops Conducted</span></div>
+            <div class="impact-box">27000<br><span>Students Reached</span></div>
+        </div>
+
+    </section>
+    <hr>
+
+    <!-- STUDENT VOICES -->
+    <section class="testimonials">
+
+        <div class="testimonial-header">
+            <h2>Student Voices</h2>
+            <h3>What Our Students Say</h3>
+        </div>
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial-card">
+                <p>"I was struggling with C programming for months until I joined The Angaar Batch..."</p>
+                <h4>— Priya Sharma</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"The free classes are just the beginning! The quality of education is incredible..."</p>
+                <h4>— Amit Joshi</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"They teach you how to think like a programmer. Pure Angaar! 🔥"</p>
+                <h4>— Sneha Kapoor</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"I joined as a complete beginner and now I'm working as a Python developer!"</p>
+                <h4>— Vikash Gupta</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"The Angaar Batch completely transformed my coding journey!"</p>
+                <h4>— Rahul Kumar</h4>
+            </div>
+
+        </div>
+
+    </section>
+    <hr>
+
+    <!-- CODE SECTION -->
+    <section class="code-section">
+
+        <div class="code-header">
+            <h2>Try It Now</h2>
+            <h3>Code in Action</h3>
+        </div>
+
+        <div class="code-box">
+
+            <p><strong>Challenge:</strong> Hello Angaar</p>
+            <p>Write a Python program that prints "I am Angaari"</p>
+
+            <h4>Expected Output:</h4>
+            <pre class="output">
+    Angaai Haiii
+            </pre>
+
+            <h4>main.py</h4>
+            <pre class="editor">
+    Angaar Haiii
+
+            </pre>
+
+            <button type="button">Run Code</button>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!-- STUDENT PROJECTS -->
+    <section class="projects">
+
+        <div class="projects-header">
+            <h2>Built by Our Students</h2>
+        </div>
+
+        <div class="project-grid">
+
+            <article class="project-card">
+                <h4>ChefAssist</h4>
+                <p>A Web-Based Solution for Ingredient-Driven Recipe Creation</p>
+            </article>
+
+            <article class="project-card">
+                <h4>Fitlife</h4>
+                <p>Comprehensive fitness tracking and workout management platform</p>
+            </article>
+
+            <article class="project-card">
+                <h4>Kidora</h4>
+                <p>Interactive learning platform designed for children's education</p>
+            </article>
+
+        </div>
+
+        <div class="project-cta">
+            <h3>Ready to Build Your Own Project?</h3>
+            <button type="button">Start Building Today</button>
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!-- PEDAGOGY -->
+    <section class="pedagogy">
+
+        <div class="pedagogy-header">
+            <h2>The Angaar Pedagogy</h2>
+            <p>How we build real developers, not just coders.</p>
+        </div>
+
+        <div class="pedagogy-grid">
+
+            <div class="pedagogy-card">
+                <h3>Project-Based Learning</h3>
+                <ul>
+                    <li>Build 5+ real-world projects</li>
+                    <li>Industry-standard workflows</li>
+                    <li>Portfolio-ready applications</li>
+                </ul>
+            </div>
+
+            <div class="pedagogy-card">
+                <h3>Community-Driven Events</h3>
+                <ul>
+                    <li>Monthly tech talks & workshops</li>
+                    <li>Industry expert sessions</li>
+                    <li>Peer learning & networking</li>
+                </ul>
+            </div>
+
+            <div class="pedagogy-card">
+                <h3>Real-World Application</h3>
+                <ul>
+                    <li>Hands-on campus workshops</li>
+                    <li>Collaborative problem solving</li>
+                    <li>Direct industry application</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+</main>
+<!-- FOOTER -->
+<footer class="main-footer">
+
+    <div class="footer-top">
+        <h3>
+            Agar Angaar hai tere houslo me, to bas dekhke mat ja...
+            Seekh... or laga de... ANGAAR🔥
+        </h3>
+    </div>
+
+    <div class="footer-content">
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#"></a>About</a></li>
+                <li><a href="#"></a>Our Team</a></li>
+                <li><a href="#"></a>Privacy Policy</a></li>
+                <li><a href="#"></a>Terms of Service</a></li>
+                <li><a href="#"></a>Verify My Certificate</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>Email: team@theangaarbatch.in</p>
+            <p>Phone: +91 8273619318</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 The Angaar Batch 🔥. All rights reserved.</p>
+        <p class="powered">Powered by W3Grads</p>
+    </div>
+
+</footer>
+
+<div class="cursor-glow"></div>
+<script>
+    const glow = document.querySelector(".cursor-glow");
+
+    document.addEventListener("mousemove", (e) => {
+        glow.style.left = e.clientX + "px";
+        glow.style.top = e.clientY + "px";
+    });
+</script>
+
+<div class="fire-particles"></div>
+
+<script>
+const container = document.querySelector(".fire-particles");
+
+for (let i = 0; i < 40; i++) {
+    const particle = document.createElement("span");
+
+    particle.style.left = Math.random() * 100 + "vw";
+    particle.style.animationDuration = (4 + Math.random() * 5) + "s";
+    particle.style.animationDelay = Math.random() * 5 + "s";
+    particle.style.width = particle.style.height = (4 + Math.random() * 4) + "px";
+
+    container.appendChild(particle);
+}
+</script>
+</body>
+</html>
